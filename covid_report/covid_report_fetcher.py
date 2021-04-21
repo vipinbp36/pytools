@@ -32,7 +32,7 @@ def search_result(driver, srf_id):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--srfid', default="2952510613352", help='Provide the SRF ID')
+    parser.add_argument('--srfid', help='Provide the SRF ID')
     parser.add_argument('--interval', default=120, help='Enter the time interval between each retry')
     args = parser.parse_args()
     chrome_options = Options()

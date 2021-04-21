@@ -1,0 +1,4 @@
+This is particularly helpful for people in karnataka.
+Fetches the covid report and does so in intervals
+
+sample command:  python3 ./covid_report_fetcher.py --srfid <srf-id> --interval 300

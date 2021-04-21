@@ -1,4 +1,5 @@
+A script to fetch the covid report using the srf id.
 This is particularly helpful for people in karnataka.
-Fetches the covid report and does so in intervals
+Fetches the covid report in intervals (default 120seconds)
 
 sample command:  python3 ./covid_report_fetcher.py --srfid <srf-id> --interval 300

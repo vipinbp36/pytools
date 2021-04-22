@@ -1,4 +1,4 @@
-# miscellaneous-tools
+# pytools
 Starting with a bunch of py scripts which helps with few daily tasks
 
 Following scripts will be available in the repo. Will update here as and when there's a new script

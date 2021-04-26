@@ -1,5 +1,5 @@
 import sys
-from selenium import webdriver
+from selenium.webdriver import Chrome
 import chromedriver_autoinstaller
 from selenium.webdriver.chrome.options import Options
 import os
@@ -75,8 +75,10 @@ if __name__ == '__main__':
     root.destroy()
     chrome_options = Options()
     chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-logging")
+    chrome_options.add_argument('log-level=2')
     chromedriver_autoinstaller.install(cwd=True)
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = Chrome(options=chrome_options)
     driver.get("https://www.covidwar.karnataka.gov.in/service1")
     search_status = False
     result = ""
@@ -93,16 +95,14 @@ if __name__ == '__main__':
                     try:
                         result = search_result(driver, srf_id)
                         if "result awaited" in result:
-                            print("Waiting for Covid report. Retrying after few seconds..")
+                            print(f"\nWaiting for Covid report. Retrying after {retry_interval} seconds..\n")
                             time.sleep(int(retry_interval))
                         else:
                             covid_result_window(result_root)
                     except:
-                        print(sys.exc_info())
-                        print("Error (Most likely captcha error). Retrying")
+                        # print("Error (Most likely captcha error). Retrying..")
                         driver.refresh()
             driver.quit()
         except:
-            print(sys.exc_info())
-            print("Error (Most likely captcha error). Retrying")
+            # print("Error (Most likely captcha error). Retrying..")
             driver.refresh()

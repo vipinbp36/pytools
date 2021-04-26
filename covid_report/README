@@ -2,6 +2,17 @@ A script to fetch the covid report using the srf id.
 This is particularly helpful for people in karnataka.
 Fetches the covid report in intervals (default 120seconds)
 
-sample command:  python ./covid_report_fetcher.py --srfid <srf-id> --interval 300
+The script uses tkinter to display a window to fetch the SRF ID and Retry duration.
+A standalone binary is available for windows. Please download the "tesseract" folder and place it in the same folder as that of the executable.
 
-Note: I haven't tested this on a windows PC. Works fine on Mac.
+That is, the following should be in the same folder:
+covid_report_fetcher-windows.exe
+tesseract
+
+The "tesseract" folder will have "tessdata" subfolder and a "tesseract.exe" windows binary.
+
+drwxr-xr-x  4 vipin.parthasarathy  staff      128 Apr 26 16:18 tessdata
+-rw-r--r--  1 vipin.parthasarathy  staff  4670976 Apr 26 11:10 tesseract.exe
+
+For MacOS, please install tesseract for the binary to work:
+"brew install tesseract"

@@ -16,3 +16,9 @@ drwxr-xr-x  4 vipin.parthasarathy  staff      128 Apr 26 16:18 tessdata
 
 For MacOS, please install tesseract for the binary to work:
 "brew install tesseract"
+
+
+Credits:
+https://github.com/tesseract-ocr/tesseract
+https://github.com/madmaze/pytesseract
+https://pypi.org/project/chromedriver-autoinstaller/
